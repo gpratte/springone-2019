@@ -384,9 +384,35 @@
 				</section>
 
 				<section>
-					<p style="font-size: 150%;">Testing Spring Boot Applications</p>
-					<p>See the <a href="https://www.youtube.com/watch?v=Wpz6b8ZEgcU&list=PLAdzTan_eSPRlQ8t4TU5c-AB4SHV939M6&index=51">YouTube recording</a></p>
-					<p>TODO slides</p>
+					<section>
+						<p style="font-size: 150%;">Testing Spring Boot Applications</p>
+						<p>See the <a href="https://www.youtube.com/watch?v=Wpz6b8ZEgcU&list=PLAdzTan_eSPRlQ8t4TU5c-AB4SHV939M6&index=51">YouTube recording</a></p>
+					</section>
+					<section>
+						<img src="img/springtesting/spring-test-school.png"  height="600" width="1000">
+					</section>
+					<section>
+						<p style="font-size: 150%;">MockRestServiceServer</p>
+						<p>
+							<a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/web/client/MockRestServiceServer.html">Javadoc</a>
+						</p>
+						<p>
+							<pre>RestTemplate restTemplate = new RestTemplate()
+MockRestServiceServer server = MockRestServiceServer.bindTo(restTemplate).build();
+
+server.expect(manyTimes(), requestTo("/hotels/42")).andExpect(method(HttpMethod.GET))
+   .andRespond(withSuccess("{ \"id\" : \"42\", \"name\" : \"Holiday Inn\"}", MediaType.APPLICATION_JSON));
+
+Hotel hotel = restTemplate.getForObject("/hotels/{id}", Hotel.class, 42);
+
+server.verify();</pre>
+						</p>
+					</section>
+					<section>
+						<p style="font-size: 150%;">Testcontainers</p>
+						<a href="https://www.testcontainers.org/">testcontainers.org</a>
+						<p>Testcontainers is a Java library that supports JUnit tests, providing lightweight, throwaway instances of common databases, Selenium web browsers, or anything else that can run in a Docker container.</p>
+					</section>
 				</section>
 
 				<section>
