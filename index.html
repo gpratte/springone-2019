@@ -438,6 +438,40 @@
 
 				<section>
 					<section>
+						<p style="font-size: 150%;">New Java Features</p>
+						<p>See the <a href="https://www.youtube.com/watch?v=6gNF2W-1REw&list=PLAdzTan_eSPRlQ8t4TU5c-AB4SHV939M6&index=117&t=0s">YouTube recording</a></p>
+						<p>Azul has spoken at AJUG. Pretty much the same presentation.</p>
+					</section>
+					<section>
+						<img src="img/jvm/jvm-jdk9.png"  height="600" width="1000">
+					</section>
+					<section>
+						<img src="img/jvm/jvm-var-1.png"  height="600" width="1000">
+					</section>
+					<section>
+						<img src="img/jvm/jvm-var-2.png"  height="600" width="1000">
+					</section>
+					<section>
+						<img src="img/jvm/jvm-switch.png"  height="600" width="1000">
+					</section>
+					<section>
+						<img src="img/jvm/jvm-switch-2.png"  height="600" width="1000">
+					</section>
+					<section>
+						<img src="img/jvm/jvm-block-string.png"  height="600" width="1000">
+					</section>
+					<section>
+						<img src="img/jvm/jvm-script.png"  height="600" width="1000">
+					</section>
+					<section>
+						<p>There was a session "Better than BASH - Scripting &amp; Automation with Kotlin"</p>
+						<p>See the <a href="https://www.youtube.com/watch?v=BHhp_1SGm64&list=PLAdzTan_eSPRlQ8t4TU5c-AB4SHV939M6&index=11&t=0s">YouTube recording</a></p>
+						<p class="fragment">Kotlin can run natively (e.g. linux). See <a href="https://www.youtube.com/watch?v=BHhp_1SGm64&list=PLAdzTan_eSPRlQ8t4TU5c-AB4SHV939M6&index=11&t=0s">Kotlin/Native for Native</a> </p>
+					</section>
+				</section>
+
+				<section>
+					<section>
 						<p style="font-size: 150%;">JUnit 5</p>
 						<p>See the <a href="https://www.youtube.com/watch?v=VP0vb-FxyNw&list=PLAdzTan_eSPRlQ8t4TU5c-AB4SHV939M6&index=21">YouTube recording</a></p>
 						<p>Just a ton of stuff</p>
@@ -446,9 +480,15 @@
 					</section>
 					<section>
 						<img src="img/junit/junit-platform.png"  height="600" width="1000">
+						<aside class="notes">
+							Moved from a monolith to a platform. Vintage is junit5, jupiter is junit 5
+						</aside>
 					</section>
 					<section>
 						<img src="img/junit/junit-even-more.png"  height="600" width="1000">
+						<aside class="notes">
+							A lot of new features and annotations
+						</aside>
 					</section>
 					<section>
 						<img src="img/junit/junit-display-name.png"  height="600" width="1000">
@@ -463,6 +503,9 @@
 					</section>
 					<section>
 						<img src="img/mutation/testing-mutation.png"  height="600" width="1000">
+						<aside class="notes">
+							When a passing test is mutated it should fail.
+						</aside>
 					</section>
 				</section>
 
@@ -491,6 +534,9 @@ Hotel hotel = restTemplate.getForObject("/hotels/{id}", Hotel.class, 42);
 
 server.verify();</pre>
 						</p>
+						<aside class="notes">
+							The resttemplate call goes to the mock
+						</aside>
 					</section>
 					<section>
 						<p style="font-size: 150%;">Testcontainers</p>
@@ -551,40 +597,6 @@ server.verify();</pre>
 						<img class="fragment" src="img/springtesting/06_SpliceTest.png"  height="400" width="800">
 						<p class="fragment">@WebMvcTest</p>
 						<p class="fragment">More overhead..</p>
-					</section>
-				</section>
-
-				<section>
-					<section>
-						<p style="font-size: 150%;">New Java Features</p>
-						<p>See the <a href="https://www.youtube.com/watch?v=6gNF2W-1REw&list=PLAdzTan_eSPRlQ8t4TU5c-AB4SHV939M6&index=117&t=0s">YouTube recording</a></p>
-						<p>Azul has spoken at AJUG. Pretty much the same presentation.</p>
-					</section>
-					<section>
-						<img src="img/jvm/jvm-jdk9.png"  height="600" width="1000">
-					</section>
-					<section>
-						<img src="img/jvm/jvm-var-1.png"  height="600" width="1000">
-					</section>
-					<section>
-						<img src="img/jvm/jvm-var-2.png"  height="600" width="1000">
-					</section>
-					<section>
-						<img src="img/jvm/jvm-switch.png"  height="600" width="1000">
-					</section>
-					<section>
-						<img src="img/jvm/jvm-switch-2.png"  height="600" width="1000">
-					</section>
-					<section>
-						<img src="img/jvm/jvm-block-string.png"  height="600" width="1000">
-					</section>
-					<section>
-						<img src="img/jvm/jvm-script.png"  height="600" width="1000">
-					</section>
-					<section>
-						<p>There was a session "Better than BASH - Scripting &amp; Automation with Kotlin"</p>
-						<p>See the <a href="https://www.youtube.com/watch?v=BHhp_1SGm64&list=PLAdzTan_eSPRlQ8t4TU5c-AB4SHV939M6&index=11&t=0s">YouTube recording</a></p>
-						<p class="fragment">Kotlin can run natively (e.g. linux). See <a href="https://www.youtube.com/watch?v=BHhp_1SGm64&list=PLAdzTan_eSPRlQ8t4TU5c-AB4SHV939M6&index=11&t=0s">Kotlin/Native for Native</a> </p>
 					</section>
 				</section>
 
