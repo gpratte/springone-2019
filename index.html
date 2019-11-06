@@ -452,6 +452,9 @@
 					<section>
 						<img src="img/junit/junit-even-more.png"  height="600" width="1000">
 					</section>
+					<section>
+						<img src="img/junit/junit-display-name.png"  height="600" width="1000">
+					</section>
 				</section>
 
 				<section>
@@ -495,6 +498,61 @@ server.verify();</pre>
 						<p style="font-size: 150%;">Testcontainers</p>
 						<a href="https://www.testcontainers.org/">testcontainers.org</a>
 						<p>Testcontainers is a Java library that supports JUnit tests, providing lightweight, throwaway instances of common databases, Selenium web browsers, or anything else that can run in a Docker container.</p>
+					</section>
+					<section>
+						<p style="font-size: 150%;">Using Spring In Unit Tests</p>
+						<p style="font-size: 150%;" class="fragment"><b>DO NOT</b> use Spring in Unit Tests</p>
+						<ul>
+							<li class="fragment">Insane overhead</li>
+							<li class="fragment">No need to use entire application context</li>
+						</ul>
+					</section>
+					<section>
+						<img src="img/springtesting/01_JunitSpring.png"  height="400" width="800">
+					</section>
+					<section>
+						<p style="font-size: 150%;">Same UnitTest without Spring</p>
+						<img src="img/springtesting/02_JunitNotSpring.png"  height="400" width="800">
+						<p>
+							<a style="font-size: 75%;" href="https://reflectoring.io/unit-testing-spring-boot/">Unit Testing Spring Boot</a>
+						</p>
+					</section>
+					<section>
+						<p style="font-size: 150%;">Using Spring In Controller Tests</p>
+					</section>
+					<section>
+						<p>Controllers have a lot of responsibilities</p>
+						<img class="fragment" src="img/springtesting/03_ControllerResp.png"  height="400" width="800">
+					</section>
+					<section>
+						<p style="font-size: 150%;">Write as Integration Test<p>
+						<ul>
+							<li class="fragment">Can’t test responsibilities otherwise (only #4)</li>
+							<li class="fragment">Separate controller from business logic</li>
+							<li class="fragment">We’re doing this as Unit Tests in a lot of our services</li>
+						</ul>
+					</section>
+					<section>
+						<p style="font-size: 150%;">@WebMvcTest<p>
+						<p class="fragment">Only loads necessary beans</p>
+						<img class="fragment" src="img/springtesting/04_WebMvc.png"  height="400" width="800">
+					</section>
+					<section>
+						<p style="font-size: 150%;">Using Spring In Integration Tests<p>
+					</section>
+					<section>
+						<p style="font-size: 150%;">@SpringBootTest<p>
+						<p class="fragment">Start up application context</p>
+						<img class="fragment" src="img/springtesting/05_SpringBootTestIT.png"  height="450" width="800">
+					</section>
+					<section>
+						<p style="font-size: 150%;">Splice Tests<p>
+					</section>
+					<section>
+						<p>Load parts of app context we need</p>
+						<img class="fragment" src="img/springtesting/06_SpliceTest.png"  height="400" width="800">
+						<p class="fragment">@WebMvcTest</p>
+						<p class="fragment">More overhead..</p>
 					</section>
 				</section>
 
