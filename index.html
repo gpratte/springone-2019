@@ -159,7 +159,7 @@
 				<section>
 					<p style="font-size: 150%;">Countries of people I met</p>
 					<ul>
-						<li>learninda</li>
+						<li>India</li>
 						<li>Ireland</li>
 						<li>Ukraine</li>
 						<li>Denmark</li>
@@ -171,7 +171,7 @@
 
 
 				<section>
-					<p style="font-size: 150%;">VMWare Acquiring Pivotal</p>
+					<p style="font-size: 150%;">2019 VMWare Acquiring Pivotal</p>
 					<a href="https://content.pivotal.io/blog/pivotal-vmware-transforming-how-more-of-the-world-builds-software">blog post</a>
 				</section>
 
@@ -282,7 +282,7 @@
 					</section>
 					<section>
 						<p style="font-size: 150%;">Performance</p>
-						<p>Mostly about increasing start up time</p>
+						<p>Mostly about decreasing start up time</p>
 					</section>
 					<section>
 						<p style="font-size: 150%;">React MVC</p>
@@ -297,7 +297,7 @@
 							<br> Not as effecient as running in netty using the React stack.
 						</p>
 						<p class="fragment fade-in-then-semi-out">Examples: server sent events; long running endpoints</p>
-						<p class="fragment fade-in-then-semi-out">Hence can mix and match react and sequential programming</p>
+						<p class="fragment fade-in-then-semi-out">Hence can mix and match react and imperative programming</p>
 					</section>
 					<section>
 						<p style="font-size: 150%;">React R2DBC</p>
@@ -367,14 +367,14 @@
 						<p class="fragment">No caching / sessions / proxies</p>
 						<p class="fragment">Very simple & limited & opinionated ORM</p>
 						<p class="fragment">1 to N mapping OK</p>
-						<p class="fragment">No many to X mappings</p>
+						<p class="fragment">No many-to-many mappings</p>
 					</section>
 					<section>
 						<p style="font-size: 150%;">Spring Data JDBC</p>
 						<p>Aggregate is a pattern in Domain-Driven Design.
 							A DDD aggregate is a cluster of domain objects
 							that can be treated as a single unit.</p>
-						<p class="fragment">Repositories work on Aggregates</p>
+						<p class="fragment">@Repositories work on Aggregates</p>
 					</section>
 				</section>
 
@@ -390,20 +390,6 @@
 					</section>
 					<section>
 						<img src="img/kotlin/kotlin-effective-java.png"  height="600" width="1000">
-					</section>
-				</section>
-
-				<section>
-					<section>
-						<p style="font-size: 150%;">FF4J: Feature Toggling</p>
-						<p>See the <a href="https://www.youtube.com/watch?v=r2vs20QLVw8&list=PLAdzTan_eSPRlQ8t4TU5c-AB4SHV939M6&index=22">YouTube recording</a></p>
-						<p>Open source feature toggles</p>
-					</section>
-					<section>
-						<img src="img/toggle/toggle-technology.png"  height="600" width="1000">
-					</section>
-					<section>
-						<img src="img/toggle/toggle-persistence.png"  height="600" width="1000">
 					</section>
 				</section>
 
@@ -431,7 +417,7 @@
 					<section>
 						<p style="font-size: 150%;">New Java Features</p>
 						<p>See the <a href="https://www.youtube.com/watch?v=6gNF2W-1REw&list=PLAdzTan_eSPRlQ8t4TU5c-AB4SHV939M6&index=117&t=0s">YouTube recording</a></p>
-						<p>Azul has spoken at AJUG. Pretty much the same presentation.</p>
+						<p>Azul has spoken at Austin Java User Group (AJUG). Pretty much the same presentation.</p>
 					</section>
 					<section>
 						<img src="img/jvm/jvm-jdk9.png"  height="600" width="1000">
@@ -481,9 +467,6 @@
 							A lot of new features and annotations
 						</aside>
 					</section>
-					<section>
-						<img src="img/junit/junit-display-name.png"  height="600" width="1000">
-					</section>
 				</section>
 
 				<section>
@@ -506,33 +489,8 @@
 						<p>See the <a href="https://www.youtube.com/watch?v=Wpz6b8ZEgcU&list=PLAdzTan_eSPRlQ8t4TU5c-AB4SHV939M6&index=51">YouTube recording</a></p>
 					</section>
 					<section>
-						<img src="img/springtesting/spring-test-school.png"  height="600" width="1000">
-					</section>
-					<section>
-						<p style="font-size: 150%;">MockRestServiceServer</p>
-						<p>
-							<a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/web/client/MockRestServiceServer.html">Javadoc</a>
-						</p>
-						<p>
-							<pre>RestTemplate restTemplate = new RestTemplate()
-MockRestServiceServer server = MockRestServiceServer.bindTo(restTemplate).build();
-
-server.expect(manyTimes(), requestTo("/hotels/42")).andExpect(method(HttpMethod.GET))
-   .andRespond(withSuccess("{ \"id\" : \"42\", \"name\" : \"Holiday Inn\"}",
-	                     MediaType.APPLICATION_JSON));
-
-Hotel hotel = restTemplate.getForObject("/hotels/{id}", Hotel.class, 42);
-
-server.verify();</pre>
-						</p>
-						<aside class="notes">
-							The resttemplate call goes to the mock
-						</aside>
-					</section>
-					<section>
-						<p style="font-size: 150%;">Testcontainers</p>
-						<a href="https://www.testcontainers.org/">testcontainers.org</a>
-						<p>Testcontainers is a Java library that supports JUnit tests, providing lightweight, throwaway instances of common databases, Selenium web browsers, or anything else that can run in a Docker container.</p>
+						<p>What happens if we don't test</p>
+						<img src="img/springtesting/spring-test-school.png"  height="500" width="800">
 					</section>
 					<section>
 						<p style="font-size: 150%;">Using Spring In Unit Tests</p>
@@ -543,14 +501,15 @@ server.verify();</pre>
 						</ul>
 					</section>
 					<section>
+						<p>Instead of this</p>
 						<img src="img/springtesting/01_JunitSpring.png"  height="400" width="800">
 					</section>
 					<section>
-						<p style="font-size: 150%;">Same UnitTest without Spring</p>
+						<p>We do this</p>
 						<img src="img/springtesting/02_JunitNotSpring.png"  height="400" width="800">
-						<p>
+						<!-- <p>
 							<a style="font-size: 75%;" href="https://reflectoring.io/unit-testing-spring-boot/">Unit Testing Spring Boot</a>
-						</p>
+						</p> -->
 					</section>
 					<section>
 						<p style="font-size: 150%;">Using Spring In Controller Tests</p>
@@ -560,34 +519,41 @@ server.verify();</pre>
 						<img class="fragment" src="img/springtesting/03_ControllerResp.png"  height="400" width="800">
 					</section>
 					<section>
-						<p style="font-size: 150%;">Write as Integration Test<p>
+						<p style="font-size: 150%;">@WebMvcTest<p>
 						<ul>
-							<li class="fragment">Can’t test responsibilities otherwise (only #4)</li>
 							<li class="fragment">Separate controller from business logic</li>
+							<li class="fragment">Only loads necessary beans</li>
 							<li class="fragment">We’re doing this as Unit Tests in a lot of our services</li>
 						</ul>
 					</section>
 					<section>
 						<p style="font-size: 150%;">@WebMvcTest<p>
-						<p class="fragment">Only loads necessary beans</p>
-						<img class="fragment" src="img/springtesting/04_WebMvc.png"  height="400" width="800">
+						<img src="img/springtesting/04_WebMvc.png"  height="400" width="800">
 					</section>
 					<section>
-						<p style="font-size: 150%;">Using Spring In Integration Tests<p>
+						<p style="font-size: 150%;">Other Splice Tests<p>
+						<img src="img/springtesting/06_SpliceTest.png"  height="400" width="800">
 					</section>
 					<section>
-						<p style="font-size: 150%;">@SpringBootTest<p>
-						<p class="fragment">Start up application context</p>
-						<img class="fragment" src="img/springtesting/05_SpringBootTestIT.png"  height="450" width="800">
+						<p style="font-size: 150%;">Integration Testing</p>
+						<p>Test a service that integrates with other resources (services, databases, ..)</p>
 					</section>
 					<section>
-						<p style="font-size: 150%;">Splice Tests<p>
+						<p style="font-size: 150%;">How To Test Boundry Cases</p>
+						<p>MockRestServiceServer</p>
+						<p class="fragment">
+							<pre>RestTemplate restTemplate = new RestTemplate()
+MockRestServiceServer server = MockRestServiceServer.bindTo(restTemplate).build();
+
+server.expect(requestTo("http://..."))
+    .andRespond((response) -> { throw new ResourceAccessException(
+        new ConnectException("Connection reset")); });</pre>
+						</p>
 					</section>
 					<section>
-						<p>Load parts of app context we need</p>
-						<img class="fragment" src="img/springtesting/06_SpliceTest.png"  height="400" width="800">
-						<p class="fragment">@WebMvcTest</p>
-						<p class="fragment">More overhead..</p>
+						<p style="font-size: 150%;">Testcontainers</p>
+						<a href="https://www.testcontainers.org/">testcontainers.org</a>
+						<p>Testcontainers is a Java library that supports JUnit tests, providing lightweight, throwaway instances of common databases, Selenium web browsers, or anything else that can run in a Docker container.</p>
 					</section>
 				</section>
 
@@ -610,7 +576,8 @@ server.verify();</pre>
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
+				],
+				transition: 'none'
 			});
 		</script>
 	</body>
